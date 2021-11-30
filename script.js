@@ -31,21 +31,16 @@ let buttonMars = document.getElementById('mars-btn');
 let buttonSaturn = document.getElementById('saturn-btn')
 
 buttonMoon.addEventListener('click', function(){
-    console.log(document.getElementById('moon-div'))
     document.getElementById('moon-div').style.display = 'flex';
 
 })
 
 buttonMars.addEventListener('click',function(){
-    // console.log(document.getElementById('moon-div'))
     document.getElementById('mars-div').style.display = 'flex';
 
 })
 
+buttonSaturn.addEventListener('click', function(){
+    document.getElementById('saturn-div').style.display = 'flex';
+})
 
-function hide(id){
-    // console.log(document.getElementById(id))
-    // document.getElementById(id).style.display = 'none';
-    console.log(document.getElementById(id))
-
-}

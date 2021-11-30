@@ -51,6 +51,7 @@ h2{
 
 /* Parcial */
 
+/* ocultar elemento, por defecto */
 .hide-div{
     display: none;
 }
