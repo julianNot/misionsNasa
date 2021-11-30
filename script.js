@@ -27,6 +27,8 @@ function writeDocument(data){
 
 // Parcial
 let buttonMoon = document.getElementById('moon-btn');
+let buttonMars = document.getElementById('mars-btn');
+let buttonSaturn = document.getElementById('saturn-btn')
 
 buttonMoon.addEventListener('click', function(){
     console.log(document.getElementById('moon-div'))
@@ -34,8 +36,16 @@ buttonMoon.addEventListener('click', function(){
 
 })
 
+buttonMars.addEventListener('click',function(){
+    // console.log(document.getElementById('moon-div'))
+    document.getElementById('mars-div').style.display = 'flex';
 
-function hide(){
-    // document.getElementById('moon-div').style.display = block;
-    console.log(document.getElementById('moon-div'))
+})
+
+
+function hide(id){
+    // console.log(document.getElementById(id))
+    // document.getElementById(id).style.display = 'none';
+    console.log(document.getElementById(id))
+
 }
