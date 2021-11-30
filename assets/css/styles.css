@@ -48,3 +48,9 @@ h2{
 .lyric-footer{
     color: white;
 }
+
+/* Parcial */
+
+.button{
+    display: none;
+}

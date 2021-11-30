@@ -24,3 +24,18 @@ function writeDocument(data){
     var text = '<div class="card" p-3>'+'<h3>'+data.name+'<h3>' + '<h3>' + data.lastname + '</h3>' + '<h5>'+data.pass +'<h5>' + '</div>'  
     div.innerHTML += text
 }
+
+// Parcial
+let buttonMoon = document.getElementById('moon-btn');
+
+buttonMoon.addEventListener('click', function(){
+    console.log(document.getElementById('moon-div'))
+    document.getElementById('moon-div').style.display = 'flex';
+
+})
+
+
+function hide(){
+    // document.getElementById('moon-div').style.display = block;
+    console.log(document.getElementById('moon-div'))
+}
