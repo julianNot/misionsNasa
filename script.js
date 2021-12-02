@@ -6,7 +6,7 @@ var email = document.getElementById("email")
 var date = document.getElementById("born")
 var password = document.getElementById("pass")
 
-form1.addEventListener("submit", function(event){
+/* form1.addEventListener("submit", function(event){
     event.preventDefault();
     console.log("Nombre: " + nameUser.value);
     console.log("Apellidos: " + lastName.value);
@@ -17,10 +17,25 @@ form1.addEventListener("submit", function(event){
     const data = Object.fromEntries(new FormData(event.target).entries())
     console.log(data)
     writeDocument(data)
-})
+}) */
 
 function writeDocument(data){
     const div = document.getElementById('container')
     var text = '<div class="card" p-3>'+'<h3>'+data.name+'<h3>' + '<h3>' + data.lastname + '</h3>' + '<h5>'+data.pass +'<h5>' + '</div>'  
     div.innerHTML += text
 }
+
+const list = []
+
+form1.addEventListener('submit', function(event){
+    event.preventDefault();
+    list.push(form1.elements['nameUser'].value)
+    form1.elements['nameUser'].value = ""
+    list.push(form1.elements['lastname'].value)
+    form1.elements['lastname'].value = ""
+    list.push(form1.elements['pass'].value)
+    form1.elements['pass'].value = ""
+
+    console.log(list)
+})
+
