@@ -32,12 +32,10 @@ let buttonSaturn = document.getElementById('saturn-btn')
 
 buttonMoon.addEventListener('click', function(){
     document.getElementById('moon-div').style.display = 'flex';
-
 })
 
 buttonMars.addEventListener('click',function(){
     document.getElementById('mars-div').style.display = 'flex';
-
 })
 
 buttonSaturn.addEventListener('click', function(){
