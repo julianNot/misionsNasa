@@ -29,13 +29,16 @@ const list = []
 
 form1.addEventListener('submit', function(event){
     event.preventDefault();
-    list.push(form1.elements['nameUser'].value)
+    
+    const data = Object.fromEntries(new FormData(event.target).entries())
     form1.elements['nameUser'].value = ""
-    list.push(form1.elements['lastname'].value)
     form1.elements['lastname'].value = ""
-    list.push(form1.elements['pass'].value)
     form1.elements['pass'].value = ""
 
-    console.log(list)
+    list.push(data)
+    localStorage.setItem('users', JSON.stringify(list))
+    
+    let dataStorage = localStorage.getItem('users')
+    console.log( JSON.parse(dataStorage))
 })
 
