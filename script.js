@@ -31,14 +31,46 @@ form1.addEventListener('submit', function(event){
     event.preventDefault();
     
     const data = Object.fromEntries(new FormData(event.target).entries())
+    
     form1.elements['nameUser'].value = ""
     form1.elements['lastname'].value = ""
     form1.elements['pass'].value = ""
 
     list.push(data)
-    localStorage.setItem('users', JSON.stringify(list))
+    localStorage.setItem('users', JSON.stringify (list)) 
     
     let dataStorage = localStorage.getItem('users')
     console.log( JSON.parse(dataStorage))
 })
+
+/* Mostrar valores de Local storage en tabla */
+let bodyTable = document.getElementById('body-table')
+let bntTable = document.getElementById('btn-table')
+
+bntTable.addEventListener('click', function(){
+    let userLocalStorage = JSON.parse(localStorage.getItem('users'))
+    for(let user of userLocalStorage){
+        bodyTable.innerHTML += `
+        <tr>
+        <td scope="row" id="name-table">${user.name}</td>
+        <td id="last-table">${user.lastname}</td>
+        <td id="pass-table">${user.pass}</td>
+        </tr>
+        `
+        console.log(user)
+    }
+})
+
+function showUsersInTable(){
+    for(let user of userLocalStorage){
+        /* bodyTable.innerHTML += `
+        <tr>
+        <td scope="row" id="name-table">${user.name}</td>
+        <td id="last-table">${user.lastname}</td>
+        <td id="pass-table">${user.pass}</td>
+        </tr>
+        ` */
+        console.log(user)
+    }
+}
 
