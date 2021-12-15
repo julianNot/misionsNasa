@@ -25,6 +25,7 @@ function writeDocument(data){
     div.innerHTML += text
 }
 
+<<<<<<< HEAD
 const list = []
 
 form1.addEventListener('submit', function(event){
@@ -73,4 +74,22 @@ function showUsersInTable(){
         console.log(user)
     }
 }
+=======
+// Parcial
+let buttonMoon = document.getElementById('moon-btn');
+let buttonMars = document.getElementById('mars-btn');
+let buttonSaturn = document.getElementById('saturn-btn')
+
+buttonMoon.addEventListener('click', function(){
+    document.getElementById('moon-div').style.display = 'flex';
+})
+
+buttonMars.addEventListener('click',function(){
+    document.getElementById('mars-div').style.display = 'flex';
+})
+
+buttonSaturn.addEventListener('click', function(){
+    document.getElementById('saturn-div').style.display = 'flex';
+})
+>>>>>>> Parcial_1
 

@@ -48,3 +48,10 @@ h2{
 .lyric-footer{
     color: white;
 }
+
+/* Parcial */
+
+/* ocultar elemento, por defecto */
+.hide-div{
+    display: none;
+}
