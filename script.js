@@ -25,7 +25,6 @@ function writeDocument(data){
     div.innerHTML += text
 }
 
-<<<<<<< HEAD
 const list = []
 
 form1.addEventListener('submit', function(event){
@@ -74,7 +73,7 @@ function showUsersInTable(){
         console.log(user)
     }
 }
-=======
+
 // Parcial
 let buttonMoon = document.getElementById('moon-btn');
 let buttonMars = document.getElementById('mars-btn');
@@ -91,5 +90,5 @@ buttonMars.addEventListener('click',function(){
 buttonSaturn.addEventListener('click', function(){
     document.getElementById('saturn-div').style.display = 'flex';
 })
->>>>>>> Parcial_1
+
 
